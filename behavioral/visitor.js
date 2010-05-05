@@ -33,7 +33,7 @@ var CarVisitor = new Class({
   }
 });
 
-var SportCarVisitor = new Class(Visitor, {
+var SportCarVisitor = new Class(CarVisitor, {
   visit: function(car) {
     car.wheels = 'sport';
     car.engine = 'loud';
@@ -41,7 +41,7 @@ var SportCarVisitor = new Class(Visitor, {
   }
 });
 
-var GirlsCarVisitor = new Class(Visitor, {
+var GirlsCarVisitor = new Class(CarVisitor, {
   visit: function(car) {
     car.wheels = 'glossy';
     car.engine = 'quiet';
