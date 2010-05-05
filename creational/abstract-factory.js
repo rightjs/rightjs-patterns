@@ -75,5 +75,5 @@ var animal = ranch.create_alive();
 
 plant.grow();       // -> 'The grass grows'
 animal.grow();      // -> 'The horsy grows'
-animal.eats(plant); // -> 'And now this horsy happyliy eats the grass'
+animal.eat(plant);  // -> 'And now this horsy happyliy eats the grass'
 
