@@ -14,7 +14,7 @@ var Car = new Class({
   initialize: function(options) {
     this.gas   = options.gas;
     this.oil   = options.oil;
-    this.tires = options.tries;
+    this.tires = options.tires;
   }
 });
 
@@ -67,7 +67,7 @@ var PitStop = new Class({
     
     // joining them together
     this.firstCheck    = this.gasCheck;
-    this.gasCheck.next = this.oilCheck;
+    this.firstCheck.next = this.oilCheck;
     this.oilCheck.next = this.tiresCheck;
   },
   
@@ -86,5 +86,4 @@ var used_car = new Car({
 var pit_stop = new PitStop();
 
 // will run the car through gas, oil and tires check
-pit_stop.check(car);
-
+pit_stop.check(used_car);
